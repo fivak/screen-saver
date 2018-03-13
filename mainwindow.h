@@ -1,6 +1,7 @@
 #ifndef MAINWINDOW_H
 #define MAINWINDOW_H
 
+#include "datetimeprovider.h"
 #include <QMainWindow>
 
 namespace Ui {
@@ -15,8 +16,12 @@ public:
     explicit MainWindow(QWidget *parent = 0);
     ~MainWindow();
 
+private slots:
+    void on_button_clicked();
+
 private:
     Ui::MainWindow *ui;
+    DateTimeProvider *dateTimeProvider;
 };
 
 #endif // MAINWINDOW_H

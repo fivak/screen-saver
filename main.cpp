@@ -1,5 +1,6 @@
 #include "mainwindow.h"
 #include <QApplication>
+
 /**
  * https://wiki.qt.io/Download_Data_from_URL
  * http://doc.qt.io/qt-5/qimage.html#loadFromData
@@ -11,9 +12,9 @@
  */
 int main(int argc, char *argv[])
 {
-    QApplication a(argc, argv);
-    MainWindow w;
-    w.show();
+    QApplication application(argc, argv);
+    MainWindow window;
+    window.show();
 
-    return a.exec();
+    return application.exec();
 }
