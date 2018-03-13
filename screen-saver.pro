@@ -11,12 +11,15 @@ SOURCES += \
         main.cpp \
         mainwindow.cpp \
     datetimeprovider.cpp \
-    userscreensaverparameters.cpp
+    userscreensaverparameters.cpp \
+    screensaver.cpp
 
 HEADERS += \
         mainwindow.h \
     datetimeprovider.h \
-    userscreensaverparameters.h
+    userscreensaverparameters.h \
+    screensaver.h
 
 FORMS += \
-        mainwindow.ui
+        mainwindow.ui \
+    screensaver.ui

@@ -2,6 +2,8 @@
 #define MAINWINDOW_H
 
 #include "datetimeprovider.h"
+#include "screensaver.h"
+
 #include <QMainWindow>
 
 namespace Ui {
@@ -17,11 +19,13 @@ public:
     ~MainWindow();
 
 private slots:
-    void on_button_clicked();
+    void on_start_button_clicked();
 
 private:
     Ui::MainWindow *ui;
+    ScreenSaver *screenSaver;
     DateTimeProvider *dateTimeProvider;
+    UserScreenSaverParameters* getUserParameters();
 };
 
 #endif // MAINWINDOW_H
