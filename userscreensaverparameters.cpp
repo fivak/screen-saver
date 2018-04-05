@@ -1,9 +1,8 @@
 #include "userscreensaverparameters.h"
 
-UserScreenSaverParameters::UserScreenSaverParameters(QDateTime endTime, int periodInSeconds) : endTime(endTime), periodInSeconds(periodInSeconds)
-{
-
-}
+UserScreenSaverParameters::UserScreenSaverParameters(QDateTime endTime, int periodInSeconds) :
+    endTime(endTime),
+    periodInSeconds(periodInSeconds) { }
 
 QDateTime UserScreenSaverParameters::getEndTime()
 {

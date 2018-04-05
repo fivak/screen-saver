@@ -45,16 +45,6 @@
      <string>Screen Saver</string>
     </property>
    </widget>
-   <widget class="QSpinBox" name="period_input">
-    <property name="geometry">
-     <rect>
-      <x>130</x>
-      <y>170</y>
-      <width>211</width>
-      <height>41</height>
-     </rect>
-    </property>
-   </widget>
    <widget class="QDateTimeEdit" name="date_time_input">
     <property name="geometry">
      <rect>
@@ -65,30 +55,40 @@
      </rect>
     </property>
    </widget>
+   <widget class="QLabel" name="period_label">
+    <property name="geometry">
+     <rect>
+      <x>30</x>
+      <y>190</y>
+      <width>91</width>
+      <height>17</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Period (s)</string>
+    </property>
+   </widget>
+   <widget class="QSpinBox" name="period_input">
+    <property name="geometry">
+     <rect>
+      <x>130</x>
+      <y>190</y>
+      <width>211</width>
+      <height>26</height>
+     </rect>
+    </property>
+   </widget>
    <widget class="QLabel" name="date_time_input_label">
     <property name="geometry">
      <rect>
       <x>30</x>
       <y>130</y>
-      <width>67</width>
+      <width>91</width>
       <height>17</height>
      </rect>
     </property>
     <property name="text">
-     <string>TextLabel</string>
-    </property>
-   </widget>
-   <widget class="QLabel" name="period_label">
-    <property name="geometry">
-     <rect>
-      <x>30</x>
-      <y>180</y>
-      <width>67</width>
-      <height>17</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>TextLabel</string>
+     <string>End time</string>
     </property>
    </widget>
   </widget>

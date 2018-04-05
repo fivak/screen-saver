@@ -1,4 +1,4 @@
-QT       += core gui
+QT       += core gui network
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
@@ -12,14 +12,23 @@ SOURCES += \
         mainwindow.cpp \
     datetimeprovider.cpp \
     userscreensaverparameters.cpp \
-    screensaver.cpp
+    screensaver.cpp \
+    filedownloader.cpp \
+    randomimageurlprovider.cpp \
+    timeprettyprinter.cpp
 
 HEADERS += \
         mainwindow.h \
     datetimeprovider.h \
     userscreensaverparameters.h \
-    screensaver.h
+    screensaver.h \
+    filedownloader.h \
+    randomimageurlprovider.h \
+    timeprettyprinter.h
 
 FORMS += \
         mainwindow.ui \
     screensaver.ui
+
+RESOURCES += \
+    resource.qrc

@@ -10,7 +10,7 @@ MainWindow::MainWindow(QWidget *parent) :
     dateTimeProvider(new DateTimeProvider(this))
 {
     ui->setupUi(this);
-    ui->period_input->setValue(5);
+    ui->period_input->setValue(2);
     ui->date_time_input->setCalendarPopup(true);
     ui->date_time_input->setDateTime(dateTimeProvider->getDateTime().addSecs(60));
 }
@@ -21,13 +21,15 @@ MainWindow::~MainWindow()
     delete dateTimeProvider;
 }
 
-UserScreenSaverParameters* MainWindow::getUserParameters()
-{
-    return new UserScreenSaverParameters(ui->date_time_input->dateTime(), ui->period_input->value());
-}
-
 void MainWindow::on_start_button_clicked()
 {
-    ScreenSaver screenSaver;
-    screenSaver.show(getUserParameters());
+    ScreenSaver *screenSaver = new ScreenSaver(this, dateTimeProvider, getUserParameters());
+    screenSaver->show();
 }
+
+UserScreenSaverParameters* MainWindow::getUserParameters()
+{
+    return new UserScreenSaverParameters(ui->date_time_input->dateTime(),
+                                         ui->period_input->value());
+}
+

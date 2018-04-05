@@ -1,8 +1,8 @@
 #ifndef MAINWINDOW_H
 #define MAINWINDOW_H
 
-#include "datetimeprovider.h"
 #include "screensaver.h"
+#include "datetimeprovider.h"
 
 #include <QMainWindow>
 

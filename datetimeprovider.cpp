@@ -1,14 +1,9 @@
 #include "datetimeprovider.h"
 
-DateTimeProvider::DateTimeProvider(QObject *parent) : QObject(parent)
-{
+DateTimeProvider::DateTimeProvider(QObject *parent)
+    : QObject(parent) { }
 
-}
-
-DateTimeProvider::~DateTimeProvider()
-{
-
-}
+DateTimeProvider::~DateTimeProvider() { }
 
 QDateTime DateTimeProvider::getDateTime()
 {
