@@ -1,6 +1,8 @@
 #include "filedownloader.h"
 
-FileDownloader::FileDownloader(QUrl imageUrl, QObject *parent) : QObject(parent) {
+FileDownloader::FileDownloader(QUrl imageUrl, QObject *parent)
+    : QObject(parent)
+{
  connect(&networkAccessManager, SIGNAL(finished(QNetworkReply*)), this, SLOT(fileDownloaded(QNetworkReply*)));
  QNetworkRequest request(imageUrl);
  networkAccessManager.get(request);

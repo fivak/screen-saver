@@ -17,6 +17,9 @@ namespace Ui {
 class ScreenSaver;
 }
 
+/**
+ * This class is resposible for running screen saver.
+ */
 class ScreenSaver : public QDialog
 {
     Q_OBJECT
@@ -24,10 +27,22 @@ class ScreenSaver : public QDialog
 public:
     explicit ScreenSaver(QWidget *parent = 0, DateTimeProvider *dateTimeProvider = 0, UserScreenSaverParameters *userScreenSaverParameters = 0);
     ~ScreenSaver();
+    /**
+     * Show and start screen saver.
+     */
     void show();
 public slots:
+    /**
+     * Set current downloaded image.
+     */
     void setImage();
+    /**
+     * Update time to left.
+     */
     void updateTime();
+    /**
+     * Download new image from server and emit signal.
+     */
     void updateImage();
 private:
     QPixmap image;
